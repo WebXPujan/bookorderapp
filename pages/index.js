@@ -8,6 +8,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Book Order App</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <meta name="description" content="Online Book order form" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta charSet="UTF-8" />
