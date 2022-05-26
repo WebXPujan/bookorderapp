@@ -5,7 +5,7 @@ import Router from 'next/router';
 import { fetchWrapper } from '../helpers'; 
 
 
-const baseUrl = 'http://localhost:5000';
+const baseUrl = 'http://65.0.157.168:5000';
 const userSubject = new BehaviorSubject(process.browser && JSON.parse(localStorage.getItem('user')));
 
 export const userService = {

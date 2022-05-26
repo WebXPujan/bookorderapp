@@ -1,5 +1,5 @@
 import { fetchWrapper } from '../helpers';
-const baseUrl = 'http://localhost:5000';
+const baseUrl = 'http://65.0.157.168:5000';
 
 export const orderService = {
   getAll,
