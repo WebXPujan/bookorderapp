@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
+import Head from 'next/head';
 import {Layout} from '../../src/components/account/Layout';
 import {userService,alertService} from '../../services';
 import { FormControl, FormHelperText,TextField,OutlinedInput,InputLabel,Button  } from '@mui/material';
@@ -49,6 +49,7 @@ function Login() {
     }
   return(
     <Layout>
+       
     <form onSubmit={handleSubmit(onSubmit)}>
     <FormControl fullWidth sx={{m:1,width: '50ch'}}>
       
