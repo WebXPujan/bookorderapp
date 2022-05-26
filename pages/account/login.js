@@ -51,7 +51,7 @@ function Login() {
   return(
     <Layout>
       <Head>
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
       </Head>
     <form onSubmit={handleSubmit(onSubmit)}>
     <FormControl fullWidth sx={{m:1,width: '50ch'}}>
