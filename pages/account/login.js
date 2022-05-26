@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import Head from 'next/head';
 import * as Yup from 'yup';
 
 import {Layout} from '../../src/components/account/Layout';
@@ -49,6 +50,9 @@ function Login() {
     }
   return(
     <Layout>
+      <Head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+      </Head>
     <form onSubmit={handleSubmit(onSubmit)}>
     <FormControl fullWidth sx={{m:1,width: '50ch'}}>
       
