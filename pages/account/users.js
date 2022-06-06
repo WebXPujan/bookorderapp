@@ -70,7 +70,7 @@ export const Users = () => {
     {field: 'name', headerName: 'Full Name', width: 250},
     {field: 'phone', headerName: 'Phone Number', width: 150},
     {field: 'address', headerName: 'Address', width: 300},
-    {field: 'link', headerName: 'Order Form Link', width: 350, valueGetter: (params) => `http://localhost:3000/?ref_id=${params.row.id}`, editable:true }
+    {field: 'link', headerName: 'Order Form Link', width: 350, valueGetter: (params) => `https://bookorderapp.vercel.app/?ref_id=${params.row.id}`, editable:true }
   ]
   useEffect(()=>{
     getUsers()
