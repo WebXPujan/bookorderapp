@@ -198,7 +198,7 @@ export const Form = (props) => {
         <FormControlLabel control={<Checkbox />} label="Jiune Marga"/>
         <FormControlLabel control={<Checkbox />} label="Gita Timro Gyan Amrit"/>
       </FormGroup> */}
-      <h2>Select Books to order</h2>
+      <h2>तल बाट कम्तिमा एउटा पुस्तक छान्नुहोला</h2>
       {
         errors.books?.message && (<p style={{color: "red"}}>{errors.books?.message}</p>)
       }
@@ -210,6 +210,8 @@ export const Form = (props) => {
                 sx={{
                   backgroundColor: (theme) =>
                     theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+                  padding: '15px',
+                  marginBottom: '20px'
                 }}
               >
                 <p style={{fontWeight: 'bold'}}>{value == 0 ? "ज्ञान गंगा" : (value == 1 ? "गीता तिम्रो ज्ञान अमृत " : "जिउने मार्ग ")}</p>
@@ -220,7 +222,7 @@ export const Form = (props) => {
                       {
                         
                           GG && GG.map(g=>(
-                            <FormControlLabel control={<Checkbox defaultChecked={g.language === "Nepali" ? true: false} />} label={g.language} sx={{ '& .MuiSvgIcon-root': { fontSize: 14 } }} key={g.language} {...register('books')} value={g.id} />
+                            <FormControlLabel control={<Checkbox />} label={g.language} sx={{ '& .MuiSvgIcon-root': { fontSize: 14 } }} key={g.language} {...register('books')} value={g.id} />
                           ))
                         
                       }
@@ -231,7 +233,7 @@ export const Form = (props) => {
                       {
                         
                           GTGA && GTGA.map(g=>(
-                            <FormControlLabel control={<Checkbox />} label={g.language} sx={{ '& .MuiSvgIcon-root': { fontSize: 14 } }} key={g.language} {...register('books')} value={g.id} />
+                            <FormControlLabel control={<Checkbox defaultChecked={g.language == "Nepali" ? true : false }/>} label={g.language} sx={{ '& .MuiSvgIcon-root': { fontSize: 14 } }} key={g.language} {...register('books')} value={g.id} />
                           ))
                         
                       }
@@ -253,8 +255,9 @@ export const Form = (props) => {
             </Grid>
           ))}
         </Grid>
+        <Button variant="contained" onClick={handleSubmit(handleOrder)} style={{width:'100%'}}>Order</Button>
       </Grid>
-    <Button variant="contained" onClick={handleSubmit(handleOrder)}>Order</Button>
+    
     </>
   )
 }
