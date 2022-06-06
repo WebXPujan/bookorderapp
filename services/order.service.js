@@ -1,5 +1,5 @@
 import { fetchWrapper } from '../helpers';
-const baseUrl = 'http://65.0.157.168:5000';
+const baseUrl = 'https://bookorderapp.xpertspool.com';
 
 export const orderService = {
   getAll,
